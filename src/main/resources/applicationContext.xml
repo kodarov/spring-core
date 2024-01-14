@@ -10,12 +10,12 @@
     </bean>
 
     <bean id="musicPlayerWithConstructor"
-          class="ru.kodarovs.springapp.MusicPlayer">
+          class="ru.kodarovs.springapp.MusicPlayer" scope="prototype">
         <constructor-arg ref="musicBean" />
     </bean>
 
     <bean id="musicPlayerWithSetter"
-          class="ru.kodarovs.springapp.MusicPlayer">
+          class="ru.kodarovs.springapp.MusicPlayer" scope="prototype">
         <property name="music" ref="musicBean"/>
         <property name="name" value="${musicPlayer.name}"/>
         <property name="volume" value="${musicPlayer.volume}"/>
